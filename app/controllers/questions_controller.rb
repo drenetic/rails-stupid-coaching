@@ -1,0 +1,15 @@
+class QuestionsController < ApplicationController
+  def ask
+    @question = params[:question]
+    @answer = ""
+    case @question
+      when "I am going to work"
+        @answer = "Great!"
+      when /\?\z/
+        @answer = "Silly question, get dressed and go to work!"
+      else
+        @answer = "I don't care, get dressed and go to work!"
+    end
+    return @answer
+  end
+end
