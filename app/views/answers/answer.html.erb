@@ -1,2 +1,11 @@
-<p>Me: <%= params[:question] %></p>
-<p>Coach: <%= @answer %></p>
+<div class="col-4 callout mb-3 pt-3 pb-2">
+  <p class="fw-light"><%= params[:question] %></p>
+  <p class="person">– You</p>
+</div>
+
+<div class="col-4 callout-coach mb-3 pt-3 pb-2">
+  <p class="fw-bolder"><%= @answer %></p>
+  <p class="person">– Coach</p>
+</div>
+
+<%= link_to "Ask another question", "/ask" %>

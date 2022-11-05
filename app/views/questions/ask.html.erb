@@ -1,4 +1,8 @@
-<form action="/answer" data-turbo="false">
-  <input type="text" name="question" value="<%= params[:question] %>">
-  <input type="submit" value="Ask!">
-</form>
+<div class="col-4 mb-3 pt-1 pb-1">
+  <form action="/answer" data-turbo="false">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" name="question" value="<%= params[:question] %>">
+      <button class="btn btn-primary" type="submit" id="">Ask!</button>
+    </div>
+  </form>
+</div>
